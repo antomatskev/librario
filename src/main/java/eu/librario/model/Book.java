@@ -6,15 +6,17 @@ public class Book {
     private String name;
     private String author;
     private int year;
+    private Person person;
 
     public Book() {
     }
 
-    public Book(long id, String name, String author, int year) {
+    public Book(long id, String name, String author, int year, Person person) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.year = year;
+        this.person = person;
     }
 
     public String getName() {
@@ -47,5 +49,13 @@ public class Book {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }

@@ -13,5 +13,11 @@
 <form th:method="DELETE" th:action="@{/books/{id}(id=${book.getId()})}">
     <input type="submit" value="Delete"/>
 </form>
+
+<b th:text="${book.getPerson() != null}
+? 'Taken by ' + ${book.getPerson()}
+: 'This book is free!'">taken by</b>
+
+
 </body>
 </html>
